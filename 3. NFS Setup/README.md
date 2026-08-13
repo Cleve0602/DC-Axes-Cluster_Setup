@@ -4,7 +4,7 @@ Network File System (NFS) enables you to easily share files and directories over
 
 This tutorial will show you how to export a directory on the head node and mount it through the network on the compute nodes. With the shared file system in place it becomes easy to enable **public key based SSH authentication**, which allows you to SSH into all the computers in your cluster without requiring a password.
 
-The head node will act as the [NFS server](https://docs.rockylinux.org/guides/file_sharing/nfsserver/) and will export the `/home/` directory to the compute node. The `/home/` directory contains the home directories of all the the non-`root` user accounts on most default Linux operating system configurations. For more information read the this link
+The head node will act as the shred home and will export the `/home/` directory to the compute node. The `/home/` directory contains the home directories of all the the non-`root` user accounts on most default Linux operating system configurations. For more information read the this link
 
 
 1. Install the NFS Utilities on both the head node and compute node(s):
@@ -24,7 +24,7 @@ The head node will act as the [NFS server](https://docs.rockylinux.org/guides/fi
    * `no_subtree_check` prevents a process where the host must check whether the file is available along with permissions for every request. It can also cause issues when a file is renamed on the host while still open on the client. Disabling it improves the reliability of NFS.
    * `no_root_squash` disables the default behavior where NFS translates requests from a root user on the client, into a non-privileged user on the host. Great care should be taken when allowing the client to gain access to the host with this setting.
 
-1. Open TCP port 2049 on your head node's firewall by editing `/etc/nftables/hn.nft`, and restarting the `nftables` service
+1. Open TCP port 2049 on your head node's firewall by editing `/etc/nftables/main.nft`, and restarting the `nftables` service
 
 1. Export the shares, then start and enable the `nfs-server` service using `systemctl` on the head node.
    ```bash
