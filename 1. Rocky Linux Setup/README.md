@@ -1,4 +1,4 @@
-# 01 - Rocky Linux Installation
+# Rocky Linux Installation
 
 ## Overview
 
