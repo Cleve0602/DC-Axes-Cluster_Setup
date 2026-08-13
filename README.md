@@ -16,14 +16,14 @@ This project documents the initial setup of a small HPC cluster consisting of on
 The cluster uses the 192.168.15.0/24 private network for communication between the nodes.
 
 ## Technologies
-Rocky Linux,
-VirtualBox,
-OpenSSH,
-NFS,
-Chrony,
-nftables,
-Ansible,
-Lmod,
-OpenMPI,
+- Rocky Linux
+- VirtualBox
+- OpenSSH
+- NFS
+- Chrony
+- nftables
+- Ansible
+- Lmod
+- OpenMPI
 
 Lmod and OpenMPI are part of the later cluster configuration. This repository currently focuses on the initial setup through NFS.
