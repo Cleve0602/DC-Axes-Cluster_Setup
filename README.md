@@ -10,8 +10,9 @@ This project documents the initial setup of a small HPC cluster consisting of on
 
 | Node         | Hostname | IP Address     | Role                    |
 | ------------ | -------- | -------------- | ----------------------- |
-| Head Node    | `head`   | `192.168.15.1` | Management / NFS Server |
-| Compute Node | `com1`   | `192.168.15.2` | Compute Node            |
+| Head Node    | `head`   | `192.168.15.1` | Management / NFS Server / Slurm |
+| Compute Node | `com1`   | `192.168.15.2` | Benchmark and Tasks     |
+| Compute Node | `com2`   | `192.168.15.5` | Benchmark and Tasks     |
 
 The cluster uses the 192.168.15.0/24 private network for communication between the nodes.
 
