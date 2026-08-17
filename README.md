@@ -4,7 +4,10 @@ A basic High-Performance Computing (HPC) cluster built using Rocky Linux, Virtua
 This project documents the initial setup of a small HPC cluster consisting of one head node and one compute node. The cluster uses a private network for node-to-node communication and NFS to share the `/home` directory between nodes.
 
 ## Cluster Architecture
-<img width="1406" height="767" alt="cluster" src="https://github.com/user-attachments/assets/3e31fc79-521a-4943-a93c-36f7fc185398" />
+<img width="1920" height="1080" alt="Your paragraph text (1)" src="https://github.com/user-attachments/assets/95818394-17c1-453a-92a0-a2a5018f74a7" />
+
+
+
 
 ## Cluster Nodes
 
