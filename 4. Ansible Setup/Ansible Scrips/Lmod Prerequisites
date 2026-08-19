@@ -1,0 +1,41 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Install EPEL
+      dnf:
+        name: epel-release
+        state: present
+
+    - name: Install basic Lmod dependencies
+      dnf:
+        name:
+          - git
+          - gcc
+          - make
+        state: present
+
+    - name: Install Tcl and other dependencies
+      dnf:
+        name:
+          - tcl-devel
+          - tcl
+          - tcllib
+          - bc
+        state: present
+
+    - name: Install Lua dependencies
+      dnf:
+        name:
+          - lua
+          - lua-posix
+          - lua-term
+          - lua-filesystem
+        state: present
+
+    - name: Install Lua development package
+      dnf:
+        name: lua-devel
+        enablerepo: devel
+        state: present
