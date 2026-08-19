@@ -1,4 +1,4 @@
-# Network Time Protocol
+# Chrony Setup
 
 NTP let's you to synchronise the time across all the computers in your network. This is important for HPC clusters as some applications require that system time be accurate between different nodes (imagine receiving a message 'before' it was sent). You will configure the NTP service through `chronyd` on your head node and then connect your compute nodes as its clients.
 
