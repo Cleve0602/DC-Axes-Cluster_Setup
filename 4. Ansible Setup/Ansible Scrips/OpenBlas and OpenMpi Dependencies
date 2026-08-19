@@ -1,0 +1,21 @@
+---
+- hosts: all
+  become: true
+
+  tasks:
+    - name: Enable CRB
+      command: dnf config-manager --set-enabled crb
+
+    - name: Install OpenMPI and dependencies
+      dnf:
+        name:
+          - openmpi
+          - openmpi-devel
+          - openblas
+          - openblas-devel
+          - gcc
+          - gcc-c++
+          - make
+          - wget
+          - nano
+        state: present
